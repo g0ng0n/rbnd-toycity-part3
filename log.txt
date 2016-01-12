@@ -1,3 +1,9 @@
+commit f251ee25b72c8d2154db354feed2a8e5465c7609
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Tue Jan 12 17:49:26 2016 -0300
+
+    Add ability to create and count products
+
 commit 14c21e10423a3f57bf17931b8ccdd803e240d5d1
 Author: Julia Van Cleve <julia@jmv.me>
 Date:   Tue Jan 12 01:23:47 2016 -0800
