@@ -64,10 +64,6 @@ transaction2 = Transaction.find(2)
 puts transaction2.product == nanoblock # Should return true
 
 
-
-t = Transaction.transaction_include_by_id?(1)
-puts t
-#puts t.product
 # walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
 

@@ -1,12 +1,19 @@
 The student answers the following questions in reflections.txt:
 
 How long did you spend working on this project? 
-	I spent like 2 hours.
+	I spent like 3 hours. 
 
 What was the most rewarding challenge you conquered?
-	The UI feature that I created, however I think I can improve it
+	The UI feature that I created with the print report functionalities
 
 What two additional features did you build? Why?
-	The User Interface to print a report of all the transactions
-	
+	The User Interface to select the functionality that the user want to see
+	->Print a report of all the transactions
+	->Print report detail of the transaction
+
 Where do you still have room to grow?
+	I had a couple of problems with the way ruby works with the class types so
+	I think I've to learn the way ruby ducktype works.
+
+	Also I would like to expand my knowleadge ruby "compiles" the code in its core
+	

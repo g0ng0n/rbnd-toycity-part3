@@ -22,13 +22,22 @@ class Transaction
   	#retrieve the transactionn, by sending the id
   	def self.find(id)
 
-  		
-  		transaction = Transaction.all.bsearch{|t| id.to_s.eql?(t.id) }
+  		founded=false
+  		response = nil
+  		Transaction.all.each do |t| 
 
-		if transaction.instance_of?(NilClass)
-	  		raise TransactionNotFoundError, "Transaction: #{id} not found"
+  			if t.id == id.to_s
+  				founded=true
+  				response=t
+  			end
+
+  		end	
+
+		if founded
+			return response
 	  	else
-	  		return transaction
+
+	  		raise TransactionNotFoundError, "Transaction: #{id} not found"
 	  	end
   	end
 
@@ -52,14 +61,13 @@ class Transaction
     	UI.print_line_separator
     	puts "Transactions Report"
     	UI.print_line_separator
-    	counter = 1;
     	@@transactions.each do |transaction|
     		puts "Id: #{transaction.id} made by #{transaction.customer.name} with #{transaction.product.get_total_prod} Products";
-    		counter +=1;
     	end
     	UI.print_line_separator
     	puts "-> End Of Transaction report"
     	UI.print_line_separator
+
     end
 
   	private

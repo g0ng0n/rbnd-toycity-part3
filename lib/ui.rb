@@ -68,6 +68,7 @@ class UI
 	      @exit=true
 	    end
     end
+
     def print_report_detail
     	welcome_message("2) Print Report Detail of a Selected Transaction")
 		transaction_id = user_input_message("Please insert ID of the transaction you want to print the detail")
@@ -78,7 +79,8 @@ class UI
     end
 
     def print_detail(transaction)
-	    puts"| Detail of Transaction Id: #{transaction.id}"
+    	puts"|-----Detail of Transaction----"
+	    puts"| Id: #{transaction.id}"
 	    puts"| Customer: #{transaction.customer.name}"
 	    puts"| List of Products"
 
@@ -106,6 +108,7 @@ class UI
     	system("clear")
     	puts message
 	end
+
 	def user_input_message(message)
 		puts message
 		user_input = UI.take_user_input
