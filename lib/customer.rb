@@ -9,6 +9,12 @@ class Customer
 		add_to_customers
   	end
 
+  	def purchase(product)
+  		Transaction.new(self,product)
+
+  	end
+
+
   	#retrieve the customer, by sending the name
   	def self.find_by_name(name)
 	  	Customer.all.each do |customer|

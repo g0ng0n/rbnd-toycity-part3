@@ -27,6 +27,19 @@ class Product
     return nil
   end
 
+  #retrieve true if there is stock of the product
+  def self.check_stock(product)
+
+    if product.in_stock?
+      Product.reduce_stock(product)
+      return true
+    else
+      return false
+    end 
+
+  end
+
+
   #check if the customer is included by sending the name
   #into the method
   def self.product_include_by_title?(title)
@@ -41,6 +54,7 @@ class Product
     end	
 
   end
+  
 
   #this method should return  an Array of 
   #all products with a stock greater than zero.
@@ -70,6 +84,9 @@ class Product
     end
   end
 
+  def stock=(new_stock)
+    @stock = new_stock
+  end
   private
   #Method that provides the functionality to add a product into the 
   #Products class variable array
@@ -89,5 +106,7 @@ class Product
     end
   end
 
-
+  def self.reduce_stock(product)
+    product.stock = product.stock - 1
+  end
 end
