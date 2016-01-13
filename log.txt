@@ -1,3 +1,27 @@
+commit b8c304a3ec6fbc181a23b30d075fd2f9ecc5e07e
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Wed Jan 13 17:32:50 2016 -0300
+
+    added some fixes to the UI
+
+commit 978c0c61094186ed4a3907ea23c02fc951b39390
+Author: Gonzalo Gisbert <Gisbert.X.Gonzalo.-ND@disney.com>
+Date:   Wed Jan 13 16:58:40 2016 -0300
+
+    added the new features implemented by the udacity User
+
+commit e8fc55483d8d1e70f28ac19aa67602c17f63f2bb
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Wed Jan 13 09:29:27 2016 -0300
+
+     added the reflections.txt file
+
+commit ace0f6b17e3e3f45866cbcccf7ab5777fc370b84
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Wed Jan 13 00:20:20 2016 -0300
+
+    added the latest log.txt file
+
 commit 0d18565c602d4a19b80374d896557fd45a4d7a72
 Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
 Date:   Wed Jan 13 00:19:43 2016 -0300
