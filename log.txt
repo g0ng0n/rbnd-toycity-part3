@@ -1,3 +1,21 @@
+commit 0d18565c602d4a19b80374d896557fd45a4d7a72
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Wed Jan 13 00:19:43 2016 -0300
+
+    added the transaction features
+
+commit 73f7a3774f96a63275989fd563d118fa9adac7b1
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Tue Jan 12 23:33:02 2016 -0300
+
+     added some comments to the methods and cleaned some code
+
+commit 8d53c77ed640e50f1832c38b970e6e6940eda7cf
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Tue Jan 12 23:30:51 2016 -0300
+
+    added the log.txt file
+
 commit 52c60cbba6ed7344f4ddd2ee21e83a300e1b64db
 Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
 Date:   Tue Jan 12 23:30:21 2016 -0300
