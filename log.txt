@@ -1,3 +1,15 @@
+commit 52c60cbba6ed7344f4ddd2ee21e83a300e1b64db
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Tue Jan 12 23:30:21 2016 -0300
+
+    added the customer funcionalities and cleaned the code of product.rb
+
+commit 51cb1dbff77a99af9dc2b53366336ab9ccc66617
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Tue Jan 12 23:21:26 2016 -0300
+
+    added the last log.txt file
+
 commit db7b6c0036df99af451e473de565cc4c9c7a781c
 Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
 Date:   Tue Jan 12 23:21:10 2016 -0300
