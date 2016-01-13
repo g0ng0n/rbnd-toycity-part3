@@ -1,0 +1,13 @@
+The student answers the following questions in reflections.txt:
+
+How long did you spend working on this project? 
+	I spent like 2 hours.
+
+What was the most rewarding challenge you conquered?
+	I cant answer this, since I'm still working on the personal features that I want to create but
+	I think those are going to be the most rewarding
+
+What two additional features did you build? Why?
+	I'm still working on this :P
+	
+Where do you still have room to grow?
