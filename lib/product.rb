@@ -11,10 +11,12 @@ class Product
    	add_to_products
   end
 
+  #retrieve the array of products
   def self.all
     @@products
   end
 
+  #retrieve the customer, by sending the title
   def self.find_by_title(title)
   	Product.all.each do |product|
 	  	if product.title.eql?(title)
@@ -25,6 +27,8 @@ class Product
     return nil
   end
 
+  #check if the customer is included by sending the name
+  #into the method
   def self.product_include_by_title?(title)
   	Product.all.each do |product|
 

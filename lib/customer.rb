@@ -9,6 +9,7 @@ class Customer
 		add_to_customers
   	end
 
+  	#retrieve the customer, by sending the name
   	def self.find_by_name(name)
 	  	Customer.all.each do |customer|
 		  	if customer.name.eql?(name)
@@ -19,7 +20,9 @@ class Customer
 	    return nil
 	end
 
-  	def self.customer_include_by_title?(name)
+	#check if the customer is included by sending the name
+	#into the method
+  	def self.customer_include_by_name?(name)
 	  	Customer.all.each do |customer|
 
 		  	if customer.name.eql?(name)
@@ -32,6 +35,8 @@ class Customer
 
   	end
 
+
+  	#retrieve the array of customers
   	def self.all
     	@@customers
   	end
@@ -44,7 +49,7 @@ class Customer
 	  	#that we want to add is already there
 	    if @@customers.count >0
 
-	    	if Customer.customer_include_by_title?(self.name)
+	    	if Customer.customer_include_by_name?(self.name)
 	        raise DuplicateProductError, "#{self.name} already exists."
 	    	else
 	    		@@customers.push(self)
