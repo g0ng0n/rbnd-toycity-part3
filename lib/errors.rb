@@ -3,3 +3,6 @@ end
 
 class OutOfStockError < StandardError
 end
+
+class TransactionNotFoundError < StandardError
+end

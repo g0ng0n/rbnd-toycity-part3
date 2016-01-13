@@ -16,6 +16,10 @@ class Product
     @@products
   end
 
+  def get_total_prod
+    @@products.count
+  end
+
   #retrieve the customer, by sending the title
   def self.find_by_title(title)
   	Product.all.each do |product|

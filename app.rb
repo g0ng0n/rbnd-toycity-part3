@@ -2,6 +2,7 @@ require_relative "lib/errors"
 require_relative "lib/customer"
 require_relative "lib/product"
 require_relative "lib/transaction"
+require_relative 'lib/ui.rb'
 
 # PRODUCTS
 
@@ -62,5 +63,12 @@ puts Transaction.all.count # Should return 2
 transaction2 = Transaction.find(2)
 puts transaction2.product == nanoblock # Should return true
 
+
+
+t = Transaction.transaction_include_by_id?(1)
+puts t
+#puts t.product
 # walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
+
+UI.new
