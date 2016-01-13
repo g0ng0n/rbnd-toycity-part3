@@ -16,7 +16,6 @@ class Product
   end
 
   def self.find_by_title(title)
-    counter = 0
   	Product.all.each do |product|
 	  	if product.title.eql?(title)
 	  		return product
@@ -25,6 +24,7 @@ class Product
 
     return nil
   end
+
   def self.product_include_by_title?(title)
   	Product.all.each do |product|
 
@@ -75,19 +75,14 @@ class Product
     if @@products.count >0
 
     	if Product.product_include_by_title?(self.title)
-        
-
-    		raise DuplicateProductError, "#{self.title} already exists."
+        raise DuplicateProductError, "#{self.title} already exists."
     	else
-
     		@@products.push(self)
-
 		  end
+
 	  else
       @@products.push(self)
-    	
     end
- 
   end
 
 
