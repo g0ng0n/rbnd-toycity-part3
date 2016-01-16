@@ -56,9 +56,9 @@ class UI
 		puts" -------------------------------------------"
 
 	end
-	
+
 	def take_action(action)
-		
+
 		case action
 	    when "1"
 	      print_report
@@ -66,7 +66,10 @@ class UI
 	      print_report_detail
 	    when "0"
 	      @exit=true
-	    end
+	    else
+				puts "You entered a wrong action, Please try Again!"
+				welcome_message "Heading back to the main menu...."
+			end
     end
 
     def print_report_detail
@@ -84,7 +87,7 @@ class UI
 	    puts"| Customer: #{transaction.customer.name}"
 	    puts"| List of Products"
 
-		print_products(transaction.product)	     
+		print_products(transaction.product)
     end
 
     def print_products(product)
@@ -115,6 +118,6 @@ class UI
 		return user_input.to_s
 	end
 
-	
-	
+
+
 end
