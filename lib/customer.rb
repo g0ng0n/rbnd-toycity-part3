@@ -4,7 +4,7 @@ class Customer
     @@customers = []
 
 	def initialize(options={})
-		@name = options[:name] 
+		@name = options[:name]
 
 		add_to_customers
   	end
@@ -32,12 +32,12 @@ class Customer
 	  	Customer.all.each do |customer|
 
 		  	if customer.name.eql?(name)
-	        	return true 
+	        	return true
 		  	else
 		  		return false
 		  	end
-		  
-	    end	
+
+	    end
 
   	end
 
@@ -46,23 +46,26 @@ class Customer
   	def self.all
     	@@customers
   	end
-    
+
     private
-    #Method that provides the functionality to add a customers into the 
+    #Method that provides the functionality to add a customers into the
     #Customers class variable array
     def add_to_customers()
 		#we validate if we have customers in the array, if so we check if the customer
 	  	#that we want to add is already there
 	    if @@customers.count >0
-
-	    	if Customer.customer_include_by_name?(self.name)
-	        raise DuplicateProductError, "#{self.name} already exists."
-	    	else
-	    		@@customers.push(self)
-			  end
-
+        begin
+	         if Customer.customer_include_by_name?(self.name)
+             raise DuplicateProductError
+           else
+ 	    		     @@customers.push(self)
+ 			     end
+        rescue
+           puts "#{self.name} already exists."
+        end
 		  else
 	      @@customers.push(self)
 	    end
 	end
+
 end

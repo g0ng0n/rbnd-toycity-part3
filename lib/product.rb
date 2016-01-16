@@ -39,7 +39,7 @@ class Product
       return true
     else
       return false
-    end 
+    end
 
   end
 
@@ -50,17 +50,17 @@ class Product
   	Product.all.each do |product|
 
 	  	if product.title.eql?(title)
-        return true 
+        return true
 	  	else
 	  		return false
 	  	end
-	  
-    end	
+
+    end
 
   end
-  
 
-  #this method should return  an Array of 
+
+  #this method should return  an Array of
   #all products with a stock greater than zero.
   def self.in_stock()
       array_response = Array.new
@@ -69,7 +69,7 @@ class Product
         if product.in_stock?
           array_response.push(product)
         end
-      end 
+      end
 
       if array_response.count>0
         return array_response
@@ -92,19 +92,21 @@ class Product
     @stock = new_stock
   end
   private
-  #Method that provides the functionality to add a product into the 
+  #Method that provides the functionality to add a product into the
   #Products class variable array
   def add_to_products()
   	#we validate if we have products in the array, if so we check if the product
   	#that we want to add is already there
     if @@products.count >0
-
-    	if Product.product_include_by_title?(self.title)
-        raise DuplicateProductError, "#{self.title} already exists."
-    	else
-    		@@products.push(self)
-		  end
-
+      begin
+      	if Product.product_include_by_title?(self.title)
+          raise DuplicateProductError.new()
+      	else
+      		@@products.push(self)
+  		  end
+      rescue DuplicateProductError
+         puts "#{DuplicateProductError} #{self.title} already exists."
+      end
 	  else
       @@products.push(self)
     end
